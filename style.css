@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* VARIABLES - CUSTOM PROPERTIES */
+:root {
+	--primary-color: #635bff;
+	--secondary-color: #1b206e;
+}
+
+.blue {
+	background: steelblue;
+}
+.orange {
+	background: orangered;
+}
+.green {
+	background: green;
+}
+.purple {
+	background: purple;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Poppins', sans-serif;
+	color: #111;
+	background: #111;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	/* height: 100vh; */
+	align-items: flex-start;
+	padding: 100px;
+	margin-top: 30px;
+}
+
+/* HERO */
+.hero-content {
+	font-size: 1.1rem;
+	z-index: 10;
+	max-width: 600px;
+}
+.hero-img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	height: 110%;
+}
+
+.hero,
+h1 {
+	font-size: 30px;
+	font-weight: 500;
+}
+
+.hero,
+p {
+	margin: 20px 0 10px;
+	font-size: 1.1rem;
+}
+
+/* SERVICIOS */
+.servicios {
+	margin-top: 40px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	text-align: center;
+}
+.servicios .servicio {
+	padding: 30px;
+	background: #f4f4f4;
+}
+.servicios .servicio:hover {
+	box-shadow: 5px 10px 40px rgba(0, 0, 0, 0.2);
+}
+.servicios .servicio h2 {
+	font-size: 24px;
+	font-weight: 500;
+	margin-top: 20px;
+	color: var(--secondary-color);
+}
+.servicios .servicio .icon img {
+	max-width: 100px;
+}
+@media (max-width: 1068px) {
+	.hero-img {
+		display: none;
+	}
+
+	.logo {
+		top: 10px;
+		left: 50px;
+		font-size: 2rem;
+	}
+
+	h1 {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+	p {
+		margin: 20px 0 10px;
+		font-size: 1rem;
+	}
+
+	section {
+		padding: 100px 36px;
+	}
+
+	li {
+		margin: 10px 0;
+	}
+	.navigation ul li a {
+		font-size: 1.5rem;
+	}
+
+	/* Servicios */
+	.servicios {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+	p {
+		margin: 20px 0 10px;
+		font-size: 0.9rem;
+	}
+
+	.servicios {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	/* Contacto */
+	.contacto {
+		flex-direction: column;
+	}
+	.contact-form {
+		width: 100%;
+		padding: 10px 10px 10px;
+	}
+}
