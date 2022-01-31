@@ -9,14 +9,16 @@
 .blue {
 	background: steelblue;
 }
-.orange {
-	background: orangered;
-}
+
 .green {
 	background: green;
 }
 .purple {
 	background: purple;
+	height: 180vh;
+}
+.orange {
+	background: orangered;
 }
 
 * {
@@ -36,10 +38,17 @@ body {
 section {
 	display: flex;
 	flex-direction: column;
-	/* height: 100vh; */
+	height: 100vh;
 	align-items: flex-start;
 	padding: 100px;
-	margin-top: 30px;
+	/* 	margin-top: 30px; */
+	scroll-snap-align: start;
+}
+
+.containerY {
+	scroll-snap-type: y proximity;
+	overflow-y: scroll;
+	height: 100vh;
 }
 
 /* HERO */
